@@ -1,4 +1,7 @@
-probando-contador
+Webservice RESTFul PHP con Slim y NotORM
 =================
 
-Esto es solo prueba, para aprender a usar git hub
+Este es un Webservices RESTFul PHP con el Framework Slim y NotORM para la conexion a la Base de Datos.
+Base de datos usada es MySql.
+
+
