@@ -35,7 +35,7 @@ require "bin/conexion.php";
 
 // GET route
 $app->get('/', function () use ($db){
-        
+       
     try{
         
         $productos = $db->tproductos()
@@ -51,16 +51,15 @@ $app->get('/', function () use ($db){
                 );
         }
 
-        
+
 
         header("Content-Type", "application/json");
-
         echo json_encode($productos);
-
-
+        
     }catch(PDOException $e){
 
-        print '{"No se puede procesar: ": {"text":'. $e->getMessage() .'}}';
+        $message = array('code'=>000, 'message'=> 'No se puede procesar: '.$e->getMessage());
+        echo json_encode($message);
 
     }
 });
